@@ -6,10 +6,8 @@ import Player from './pages/Player/Player'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebase'
 import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,28 +19,26 @@ const App = () => {
         console.log("Logged Out");
         navigate("/login");
       }
-    })
+    });
   }, [navigate]);
 
   return (
     <div>
-      {/* Disclaimer Banner */}
+      {/* ⚠️ Demo banner */}
       <div style={{
-        backgroundColor: "#ffcccc",
-        color: "#660000",
-        padding: "12px",
+        background: "#ffcc00",
+        color: "#000",
+        padding: "8px",
         textAlign: "center",
-        fontWeight: "bold",
         fontSize: "14px",
-        position: "sticky",
-        top: 0,
-        zIndex: 9999
+        fontWeight: "bold"
       }}>
         ⚠️ Demo project for learning purposes only. 
         No real login or personal data collected.
       </div>
 
       <ToastContainer theme='dark' />
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
