@@ -25,7 +25,7 @@ const App = () => {
   return (
     <div>
       {/* ⚠️ Demo banner */}
-      <div style={{
+      {/* <div style={{
         background: "#ffcc00",
         color: "#000",
         padding: "8px",
@@ -35,7 +35,7 @@ const App = () => {
       }}>
         ⚠️ Demo project for learning purposes only. 
         No real login or personal data collected.
-      </div>
+      </div> */}
 
       <ToastContainer theme='dark' />
 
